@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginBottom="1dp"
+    app:cardElevation="5dp"
+    app:contentPadding="8dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/imageviewMLImage"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="5dp"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"
+            android:src="@drawable/city"
+            />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:orientation="vertical"
+            android:layout_toEndOf="@+id/imageviewMLImage"
+            >
+            <TextView
+                android:id="@+id/txtviewArea"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Area"
+                android:textSize="18dp"
+                android:textColor="@color/teal_700"
+                android:padding="5dp"/>
+
+            <TextView
+                android:id="@+id/txtviewCity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="City"
+                android:textSize="18dp"
+                android:textColor="#7C1109"
+                android:padding="5dp"/>
+
+
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp">
+
+
+
+                <TextView
+                    android:id="@+id/txtviewDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="10dp"
+                    android:text="Date"
+                    android:textColor="@color/black"
+                    android:textStyle="bold|italic"/>
+
+                <TextView
+                    android:id="@+id/txtviewStatus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginStart="20dp"
+                    android:text="status"
+                    android:textColor="@color/black"
+                    android:layout_toEndOf="@+id/txtviewDate"
+                    android:textStyle="bold|italic"
+                    />
+
+
+
+
+            </RelativeLayout>
+
+        </LinearLayout>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/nextTV"
+            android:scaleType="fitCenter"
+            android:layout_alignParentEnd="true"
+            android:adjustViewBounds="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="5dp"
+            android:src="@drawable/ic_baseline_navigate_next_24"/>
+
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

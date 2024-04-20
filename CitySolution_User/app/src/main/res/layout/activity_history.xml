@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HistoryActivity">
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#99EAE0"
+        android:id="@+id/rltvlayoutHistory"
+        >
+
+
+        <EditText
+            android:id="@+id/edttxtsearch_bar"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/edittext_bg"
+            android:drawableStart="@drawable/ic_baseline_search_24"
+            android:drawablePadding="10dp"
+            android:hint="Search"
+            android:padding="10dp" />
+
+        <ImageButton
+            android:id="@+id/imgbtnhisGraph"
+            android:layout_width="120dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="13dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginBottom="5dp"
+            android:layout_toEndOf="@+id/edttxtsearch_bar"
+            android:adjustViewBounds="true"
+            android:backgroundTint="@color/teal_700"
+            android:scaleType="fitXY"
+            android:src="@drawable/graphh"
+            android:text="Graph" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:id="@+id/btnFilter"
+            android:backgroundTint="@color/teal_700"
+            android:layout_marginBottom="0dp"
+            android:layout_below="@+id/edttxtsearch_bar"
+            android:scaleType="fitXY"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="10dp"
+            android:text="@string/Sortby"
+            />
+
+
+        <TextView
+            android:id="@+id/txtviewfilter"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:layout_below="@+id/edttxtsearch_bar"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="9dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginBottom="0dp"
+
+            android:padding="5dp"
+            android:text="No Filtering"
+            android:textColor="@color/teal_700"
+            android:textSize="15dp"
+            android:textStyle="bold|italic"/>
+
+        <TextView
+            android:id="@+id/txtInternetStatusHistory"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtviewfilter"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginEnd="10dp"
+
+            android:layout_marginBottom="10dp"
+
+            android:gravity="center"
+            android:text="@string/no_int"
+            android:textColor="@color/colorPrimary"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+
+
+    </RelativeLayout>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rltvlayoutHistory">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/RecyclerViewrv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/txtviewfilter"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="5dp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:listitem="@layout/row_history" />
+        />
+
+
+    </ScrollView>
+
+</RelativeLayout>

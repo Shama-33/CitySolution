@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AuthDetails">
+
+    <!-- ImageView at the Center -->
+
+    <!-- Row 1 -->
+
+    <ImageView
+        android:id="@+id/centerImageView"
+        android:layout_width="362dp"
+        android:layout_height="362dp"
+        android:layout_margin="20dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/logo" />
+
+    <TextView
+        android:layout_marginLeft="10dp"
+        android:id="@+id/label1"
+        android:textColor="@color/black"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Name"
+        android:textSize="18dp"
+        android:layout_below="@id/centerImageView"
+        android:layout_marginTop="16dp"/>
+
+    <TextView
+        android:id="@+id/txtName"
+
+        android:layout_width="287dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/centerImageView"
+        android:layout_marginStart="76dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="16dp"
+        android:layout_toEndOf="@id/label1"
+        android:backgroundTint="@color/grey_3"
+        android:hint="Enter text for Field 1"
+        android:textColor="@color/teal_700"
+        android:textSize="18dp"
+        android:textStyle="italic" />
+
+    <!-- Row 2 -->
+    <TextView
+        android:layout_marginLeft="10dp"
+        android:id="@+id/label2"
+        android:textColor="@color/black"
+        android:textSize="18dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="City"
+        android:layout_below="@id/txtName"
+        android:layout_marginTop="16dp"/>
+
+    <TextView
+        android:id="@+id/txtCity"
+
+        android:layout_width="283dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtName"
+        android:layout_marginStart="98dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="16dp"
+        android:layout_toEndOf="@id/label2"
+        android:hint="Enter text for Field 2"
+        android:textColor="@color/teal_700"
+        android:textSize="18dp"
+        android:textStyle="italic" />
+
+    <!-- Row 3 -->
+    <TextView
+        android:id="@+id/label3"
+        android:layout_marginLeft="10dp"
+        android:textColor="@color/black"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Phone"
+        android:textSize="18dp"
+        android:layout_below="@id/txtCity"
+        android:layout_marginTop="16dp"/>
+
+    <TextView
+        android:id="@+id/txtPhn"
+
+        android:layout_width="283dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtCity"
+        android:layout_marginStart="77dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="16dp"
+        android:layout_toEndOf="@id/label3"
+        android:hint="Enter text for Field 3"
+        android:textColor="@color/teal_700"
+        android:textSize="18dp"
+        android:textStyle="italic" />
+
+    <!-- Row 4 -->
+    <TextView
+        android:id="@+id/label4"
+        android:layout_marginLeft="10dp"
+        android:textColor="@color/black"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Email"
+        android:textSize="18dp"
+        android:layout_below="@id/txtPhn"
+        android:layout_marginTop="16dp"/>
+
+    <TextView
+        android:id="@+id/txtEmail"
+
+        android:layout_width="281dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtPhn"
+        android:layout_marginStart="86dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="16dp"
+        android:layout_toEndOf="@id/label4"
+        android:hint="Enter text for Field 4"
+        android:textColor="@color/teal_700"
+        android:textSize="18dp"
+        android:textStyle="italic" />
+
+    <!-- Row 5 -->
+    <TextView
+        android:id="@+id/label5"
+        android:layout_marginLeft="10dp"
+        android:textColor="@color/black"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Employee_id"
+        android:textSize="18dp"
+        android:layout_below="@id/txtEmail"
+        android:layout_marginTop="16dp"/>
+
+    <TextView
+        android:id="@+id/txtUserId"
+
+        android:layout_marginLeft="30dp"
+        android:textStyle="italic"
+        android:textColor="@color/teal_700"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtEmail"
+        android:layout_toEndOf="@id/label5"
+        android:layout_marginTop="16dp"
+        android:textSize="18dp"
+        android:hint="Enter text for Field 5"/>
+
+    <!-- Button -->
+    <Button
+        android:id="@+id/btnDelete"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:layout_below="@id/txtUserId"
+        android:layout_marginTop="15dp"
+        android:backgroundTint="@color/teal_700"
+        android:text="DELETE"/>
+
+</RelativeLayout>

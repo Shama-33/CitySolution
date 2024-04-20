@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+
+<string name="app_name">CitySolution</string>
+
+    <string name="no_int">---ইন্টারনেট সংযোগ নেই---</string>
+<string name="lbl_payment_details">সমস্যা-স্থান</string>
+<string name="lbl_loca">এলাকা : </string>
+<string name="lbl_city">শহর: </string>
+<string name="lbl_state">জেলা: </string>
+<string name="country">দেশ: </string>
+<string name="pincode">পিনকোড: </string>
+<string name="dictrict">জেলা: </string>
+    <string name="lbl_div">বিভাগ : </string>
+<string name="ques">  </string>
+    <string name="mapbtn">মানচিত্রে দেখুন</string>
+    <string name="locbtn1">প্রদান</string>
+    <string name="locbtn2">প্রক্রিয়াধীন</string>
+    <string name="locbtn3">নিষ্পন্ন</string>
+    <string name="loctxt">আপনার মতামত :</string>
+
+<string name="navigation_drawer_open">NavigationDrawerOpen</string>
+<string name="navigation_drawer_close"> NavigationDrawerClose</string>
+    <string name="Select_Picture_UploadActivity">ছবি নির্বাচন করুন</string>
+    <string name="Select_English_Settings_Activity">ইংরেজি</string>
+    <string name="Select_Bangla_Settings_Activity">বাংলা</string>
+
+    <string name="lbl_com">মন্তব্য পাওয়া যায় নি</string>
+    <string name="CityName">শহরের নাম লিখুন</string>
+    <string name="lblEnter">প্রদান</string>
+
+    <string name="Sortby">ক্রম</string>
+    <string name="locint">ইন্টারনেট ও লোকেশন সার্ভিস চালু করুন</string>
+    <string name="write">এখানে লিখুন</string>
+    <string name="upload">জমা দিন</string>
+    <string name="update">পরিবর্তন</string>
+    <string name="address">ঠিকানা</string>
+    <string name="occ">পেশা</string>
+    <string name="langsettings">ভাষা সেটিংস</string>
+    <string name="lang">ভাষা নির্বাচন</string>
+    <string name="accset">একাউন্ট সেটিংস</string>
+    <string name="resetpass">পাসওয়ার্ড পরিবর্তন</string>
+    <string name="prof">প্রোফাইল সেটিংস</string>
+    <string name="takepic">ছবি তুলুন</string>
+    <string name="Category">প্রকারভেদ</string>
+    <string name="Progress">উন্নয়ন</string>
+    <string name="Home">হোম</string>
+    <string name="Profile">প্রোফাইল</string>
+    <string name="Notifications">নোটিফিকেশন</string>
+    <string name="History">সমস্যাসমূহ</string>
+    <string name="Settings">সেটিংস</string>
+    <string name="Statistics">পরিসংখ্যান</string>
+    <string name="AboutUs">বিবিধ</string>
+    <string name="SignOut">সাইন আউট</string>
+    <string name="locint1">অবস্থান</string>
+</resources>

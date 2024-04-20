@@ -1,0 +1,52 @@
+<resources>
+    <string name="app_name">CitySolution</string>
+
+    <string name="no_int">---No Internet Connection---</string>
+    <string name="lbl_payment_details">Problem Location </string>
+    <string name="lbl_loca">Locality: </string>
+    <string name="lbl_city">City: </string>
+    <string name="lbl_div">Division : </string>
+    <string name="lbl_state">State: </string>
+    <string name="country">Country: </string>
+    <string name="pincode">PinCode: </string>
+    <string name="dictrict">District: </string>
+    <string name="ques">  </string>
+    <string name="mapbtn">See location on map</string>
+    <string name="locbtn1">Uploaded</string>
+    <string name="locbtn2">Processing</string>
+    <string name="locbtn3">Solved</string>
+    <string name="loctxt">Description and Comments :</string>
+    <string name="navigation_drawer_open">NavigationDrawerOpen</string>
+    <string name="navigation_drawer_close"> NavigationDrawerClose</string>
+    <string name="Select_Picture_UploadActivity">Select Image</string>
+    <string name="Select_English_Settings_Activity">English</string>
+    <string name="Select_Bangla_Settings_Activity">Bangla</string>
+
+    <string name="lbl_com">No additional comments provided</string>
+    <string name="CityName">Enter City Name</string>
+    <string name="lblEnter">Enter</string>
+    <string name="Sortby">Sort By</string>
+    <string name="locint">turn on the internet and location services</string>
+    <string name="locint1">Location not showing? Click Here</string>
+    <string name="write">write here</string>
+    <string name="upload">upload</string>
+    <string name="update">update</string>
+    <string name="address">address</string>
+    <string name="occ">occupation</string>
+    <string name="langsettings">Language Settings</string>
+    <string name="lang">Select Language</string>
+    <string name="accset">Account Settings</string>
+    <string name="resetpass">Reset Password</string>
+    <string name="prof">Profile settings</string>
+    <string name="takepic">Take Picture</string>
+    <string name="Category">Category</string>
+    <string name="Progress">Progress</string>
+    <string name="Home">Home</string>
+    <string name="Profile">Profile</string>
+    <string name="Notifications">Notifications</string>
+    <string name="History">History</string>
+    <string name="Settings">Settings</string>
+    <string name="Statistics">Statistics</string>
+    <string name="AboutUs">About Us</string>
+    <string name="SignOut">Sign Out</string>
+</resources>

@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SettingsActivity">
+
+
+   <ScrollView
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content">
+       <RelativeLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content">
+
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:orientation="vertical"
+           android:id="@+id/llLang">
+
+        <TextView
+            android:id="@+id/tvLanguageSettings"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/langsettings"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:padding="16dp"/>
+
+        <TextView
+            android:id="@+id/tvSelectLanguage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/lang"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:layout_below="@id/tvLanguageSettings"
+            android:padding="5dp"/>
+
+        <RadioGroup
+            android:id="@+id/radioGroupLanguage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvSelectLanguage"
+            android:padding="5dp">
+
+            <RadioButton
+                android:id="@+id/radioButtonEnglish"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/Select_English_Settings_Activity"/>
+
+            <RadioButton
+                android:id="@+id/radioButtonBangla"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/Select_Bangla_Settings_Activity"/>
+        </RadioGroup>
+
+
+
+       </LinearLayout>
+
+
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:orientation="vertical"
+               android:layout_below="@+id/llLang"
+               android:id="@+id/llAcc">
+
+               <TextView
+                   android:id="@+id/tvAccountSettings"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:text="@string/accset"
+                   android:textColor="@color/black"
+                   android:textSize="20sp"
+                   android:textStyle="bold"
+                   android:padding="16dp"/>
+               <Button
+                   android:id="@+id/btnResetPassword"
+                   android:layout_width="350dp"
+                   android:layout_height="wrap_content"
+                   android:text="@string/resetpass"
+                   android:textColor="@android:color/white"
+                   android:backgroundTint="@color/teal_700"
+               android:layout_marginTop="16dp"
+               android:padding="12dp"
+               android:onClick="onResetPasswordClicked"
+                   android:layout_gravity="center"/>
+               <Button
+                   android:id="@+id/btnProfileSettings"
+                   android:layout_width="350dp"
+                   android:layout_height="wrap_content"
+                   android:text="@string/prof"
+                   android:textColor="@android:color/white"
+                   android:backgroundTint="@color/teal_700"
+                   android:layout_marginTop="16dp"
+                   android:padding="12dp"
+                   android:onClick="onResetPasswordClicked"
+                   android:layout_gravity="center"/>
+
+
+
+
+
+
+
+
+           </LinearLayout>
+
+
+       </RelativeLayout>
+
+
+
+   </ScrollView>
+
+
+
+
+
+</RelativeLayout>

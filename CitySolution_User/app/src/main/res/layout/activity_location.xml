@@ -1,0 +1,380 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".LocationActivity">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+
+            <ImageView
+                android:id="@+id/imgML"
+                android:layout_width="362dp"
+                android:layout_height="300dp"
+                android:layout_gravity="center"
+                android:scaleType="fitXY" />
+
+
+
+            <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="@string/locint"
+        android:textAlignment="center"
+        android:textColor="@color/teal_700"
+        android:textSize="18dp"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <ProgressBar
+        android:id="@+id/progress_circular"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hello World!"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <!--
+
+    <TextView
+        android:id="@+id/textLatLong"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="LatLong!"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+        -->
+
+
+            <LinearLayout
+                android:layout_width="362dp"
+                android:layout_gravity="center"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/spacing_standard_new"
+                android:layout_marginEnd="@dimen/spacing_standard_new"
+                android:layout_marginBottom="@dimen/spacing_standard_new"
+                android:background="@drawable/bg_rectangle_order"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="70dp"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="@font/montserrat"
+                    android:paddingStart="@dimen/spacing_standard_new"
+                    android:paddingTop="@dimen/spacing_standard"
+                    android:paddingEnd="@dimen/spacing_standard_new"
+                    android:paddingBottom="@dimen/spacing_standard"
+                    android:text="Address(You can modify)"
+                    android:textColor="@color/textColorPrimary"
+                    android:textStyle="bold" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/divider_width"
+                    android:background="@color/view_color" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="@dimen/spacing_standard">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/spacing_standard"
+                        android:layout_marginEnd="@dimen/spacing_standard"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/montserrat"
+                            android:textSize="18dp"
+                            android:text="@string/lbl_loca"
+                            android:textColor="@color/colorPrimary_sec" />
+
+                        <EditText
+                            android:id="@+id/textaddress"
+                            android:textSize="18dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@color/white"
+                            android:fontFamily="@font/montserrat"
+                            android:textColor="@color/teal_700" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/spacing_standard"
+                        android:layout_marginTop="@dimen/spacing_control"
+                        android:layout_marginEnd="@dimen/spacing_standard"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/montserrat"
+                            android:text="@string/lbl_city"
+                            android:textSize="18dp"
+                            android:textColor="@color/colorPrimary_sec" />
+
+                        <EditText
+                            android:id="@+id/textlocality"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/spacing_control"
+                            android:textSize="18dp"
+                            android:background="@color/white"
+                            android:fontFamily="@font/montserrat"
+                            android:text="@string/ques"
+                            android:textColor="@color/teal_700" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/spacing_standard"
+                        android:layout_marginTop="@dimen/spacing_standard"
+                        android:layout_marginEnd="@dimen/spacing_standard"
+                        android:layout_marginBottom="@dimen/spacing_control"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center_vertical"
+                            android:textSize="18dp"
+                            android:layout_marginTop="0dp"
+                            android:fontFamily="@font/montserrat"
+                            android:gravity="center_vertical"
+                            android:text="@string/pincode"
+                            android:textColor="@color/colorPrimary_sec" />
+
+                        <EditText
+                            android:id="@+id/textcode"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="18dp"
+                            android:layout_marginStart="@dimen/spacing_control"
+                            android:layout_marginTop="0dp"
+                            android:background="@color/white"
+                            android:fontFamily="@font/montserrat"
+                            android:text="@string/ques"
+                            android:textColor="@color/teal_700"
+                            tools:text="$50" />
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginStart="@dimen/spacing_standard"
+                        android:layout_marginTop="@dimen/spacing_standard"
+                        android:layout_marginEnd="@dimen/spacing_standard"
+                        android:layout_marginBottom="@dimen/spacing_control"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginTop="0dp"
+                            android:textSize="18dp"
+                            android:fontFamily="@font/montserrat"
+                            android:gravity="center_vertical"
+                            android:text="@string/lbl_div"
+                            android:textColor="@color/colorPrimary_sec" />
+
+                        <EditText
+                            android:id="@+id/textstate"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/spacing_control"
+                            android:textSize="18dp"
+                            android:layout_marginTop="0dp"
+                            android:background="@color/white"
+                            android:fontFamily="@font/montserrat"
+                            android:text="@string/ques"
+                            android:textColor="@color/teal_700"
+
+                            tools:text="$50" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/spacing_standard"
+                        android:layout_marginTop="@dimen/spacing_standard"
+                        android:layout_marginEnd="@dimen/spacing_standard"
+                        android:layout_marginBottom="@dimen/spacing_control"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginTop="0dp"
+                            android:fontFamily="@font/montserrat"
+                            android:gravity="center_vertical"
+                            android:textSize="18dp"
+                            android:text="@string/dictrict"
+                            android:textColor="@color/colorPrimary_sec" />
+
+                        <EditText
+                            android:id="@+id/textdistrict"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/spacing_control"
+                            android:layout_marginTop="0dp"
+                            android:background="@color/white"
+                            android:fontFamily="@font/montserrat"
+                            android:text="@string/ques"
+                            android:textColor="@color/teal_700"
+                            android:textSize="18dp"
+                            tools:text="$50" />
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/spacing_standard"
+                        android:layout_marginTop="@dimen/spacing_standard"
+                        android:layout_marginEnd="@dimen/spacing_standard"
+                        android:layout_marginBottom="@dimen/spacing_control"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginTop="0dp"
+                            android:fontFamily="@font/montserrat"
+                            android:gravity="center_vertical"
+                            android:text="@string/country"
+                            android:textSize="18dp"
+                            android:textColor="@color/colorPrimary_sec" />
+
+                        <TextView
+                            android:id="@+id/textcountry"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/spacing_control"
+                            android:layout_marginTop="0dp"
+                            android:background="@color/white"
+                            android:fontFamily="@font/montserrat"
+                            android:text="@string/ques"
+                            android:textColor="@color/teal_700"
+                            android:textSize="18dp"
+                            tools:text="$50" />
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/loctxt"
+                android:textColor="@color/black"
+                android:textSize="16dp"
+                android:layout_marginBottom="20dp"
+                android:layout_marginTop="20dp"
+                android:textStyle="italic"
+                android:layout_marginLeft="10dp"/>
+
+     <EditText
+         android:layout_width="350dp"
+         android:layout_height="wrap_content"
+         android:id="@+id/edttxtdescription"
+         android:inputType="textImeMultiLine"
+         android:hint="@string/write"
+         android:layout_gravity="center"
+         android:padding="10dp"
+         android:textColor="@color/teal_700"
+         android:layout_marginBottom="30dp"
+         android:textSize="18dp"
+         />
+    <Button
+        android:id="@+id/btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="italic"
+        android:padding="10dp"
+        android:text="@string/locint1"
+        android:backgroundTint="@color/white"
+        android:textColor="@color/teal_700"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_gravity="center"
+        android:layout_marginBottom="20dp"/>
+
+
+
+
+
+    <Button
+        android:id="@+id/btnupload"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="italic"
+        android:padding="10dp"
+        android:text="@string/upload"
+        android:layout_marginBottom="20dp"
+        android:backgroundTint="@color/teal_700"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_gravity="center"/>
+
+            <ProgressBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/upload_progress_bar"
+                android:layout_gravity="center"
+                android:layout_marginBottom="20dp"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+</LinearLayout>
