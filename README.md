@@ -28,11 +28,11 @@ This project utilizes various components and technologies, including:
 
 ## Repository Structure
 - **CitySolution_User**: Contains the source code and resources for the User App.
--  CitySolution_User/app/src/main/java/com/example/usersafecity : Contains the Java Files
--  CitySolution_User/app/src/main/res/layout : Contains the xml file
+   CitySolution_User/app/src/main/java/com/example/usersafecity : Contains the Java Files
+   CitySolution_User/app/src/main/res/layout : Contains the xml file
 - **CitySolution_Authority**: Contains the source code and resources for the Authority App.
-- CitySolution_Authority/app/src/main/java/com/example/safecity : Contains the Java Files
-- CitySolution_Authority/app/src/main/res/layout : Contains the xml files
+   CitySolution_Authority/app/src/main/java/com/example/safecity : Contains the Java Files
+   CitySolution_Authority/app/src/main/res/layout : Contains the xml files
 
 
 ## Installation
