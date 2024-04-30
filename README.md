@@ -42,7 +42,7 @@ This project utilizes various components and technologies, including:
    
 **Or**
 
-You can directly find the executable file(app) in the apk folder. Download and Install it directly to your android mobile phone.
+ You can directly find the executable file(app) in the apk folder. Download and Install it directly to your android mobile phone.
 
 ## License
 This project is licensed under the [Apache License 2.0](LICENSE).
