@@ -39,6 +39,8 @@ This project utilizes various components and technologies, including:
 1. Clone the repository.
 2. Open the respective Android projects in Android Studio.
 3. Build and run the apps on your device or emulator.
+**Or**
+- You can directly find the executable file(app) in the apk folder. Download and Install it directly to your android mobile phone.
 
 ## License
 This project is licensed under the [Apache License 2.0](LICENSE).
