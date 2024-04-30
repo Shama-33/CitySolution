@@ -17,7 +17,7 @@ The Authority App is designed for government authorities to manage and address r
 - **Higher Authority Segment**: A dedicated segment allows the higher authority to oversee and manage problems reported from all cities. Higher officials can also delete city corporation employee accounts.
 - **Graphican Views**: Graphical views are  included for easier monitoring.
 
-- ## Components Used
+## Components Used
 This project utilizes various components and technologies, including:
 
 - **Android Studio**: Integrated Development Environment (IDE) for Android app development.
