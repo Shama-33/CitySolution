@@ -44,6 +44,10 @@ This project utilizes various components and technologies, including:
 
  You can directly find the executable file(app) in the apk folder. Download and Install it directly to your android mobile phone.
 
+ ## Demo Use
+  You can find the screen-recordings of the two apps inside the AppVideo folder.
+ 
+
 ## License
 This project is licensed under the [Apache License 2.0](LICENSE).
 
