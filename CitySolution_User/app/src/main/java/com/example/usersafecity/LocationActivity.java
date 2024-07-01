@@ -357,7 +357,7 @@ public class LocationActivity extends AppCompatActivity {
         }
         loc=address.getText().toString().trim();
 
-        if(!con.isEmpty()&&con.toLowerCase()!="bangladesh")
+        if(!con.isEmpty()&&!con.equalsIgnoreCase("bangladesh"))
         {
             Toast.makeText(this, "This service is available for Bangladesh only!!!", Toast.LENGTH_SHORT).show();
             country.setText("");
