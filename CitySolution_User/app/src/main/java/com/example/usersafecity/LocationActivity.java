@@ -64,7 +64,7 @@ public class LocationActivity extends AppCompatActivity {
     private static final int LOCATION_PERMISSION_REQUEST_CODE = 1;
     ProgressBar progressBar;
    // TextView textLatLong;
-    TextView country;
+    EditText country;
     EditText address, postcode, locaity, state, district;
     ResultReceiver resultReceiver;
     // Get the image, classification result, and confidence
@@ -79,6 +79,20 @@ public class LocationActivity extends AppCompatActivity {
     private String con,dis,div,ct,loc,pin,cc;
     private NetworkChangeReceiver networkChangeReceiver;
     private ProgressBar uploadProgressBar;
+    /*
+     <TextView
+                            android:id="@+id/textcountry"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/spacing_control"
+                            android:layout_marginTop="0dp"
+                            android:background="@color/white"
+                            android:fontFamily="@font/montserrat"
+                            android:text="@string/ques"
+                            android:textColor="@color/teal_700"
+                            android:textSize="18dp"
+                            tools:text="$50" />
+     */
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -337,10 +351,25 @@ public class LocationActivity extends AppCompatActivity {
         pin=postcode.getText().toString().trim();
         div=state.getText().toString().trim();
         ct=locaity.getText().toString().trim();
+
         if (!ct.isEmpty()) {
             ct = ct.substring(0, 1).toUpperCase() + ct.substring(1).toLowerCase();
         }
         loc=address.getText().toString().trim();
+
+        if(!con.isEmpty()&&con.toLowerCase()!="bangladesh")
+        {
+            Toast.makeText(this, "This service is available for Bangladesh only!!!", Toast.LENGTH_SHORT).show();
+            country.setText("");
+            locaity.setText("");
+            address.setText("");
+            district.setText("");
+            state.setText("");
+            postcode.setText("");
+            edttxtdescription.setText("");
+            uploadProgressBar.setVisibility(View.GONE);
+            return;
+        }
 
 
         if(con.isEmpty()||dis.isEmpty()||div.isEmpty()||ct.isEmpty()||loc.isEmpty())
