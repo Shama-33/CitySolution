@@ -27,7 +27,7 @@ import com.google.firebase.database.ValueEventListener;
 import java.util.ArrayList;
 
 public class CategoryActivity2 extends AppCompatActivity {
-    Button road,flood,trash,home,others,fake,auth;
+    Button road,flood,trash,home,others,fake,auth,btnGraphCC;
     private int d=0,f=0,t=0,h=0,o=0,fk=0;
     String dd,ff,tt,hh,oo;
     String cityName;
@@ -49,15 +49,20 @@ public class CategoryActivity2 extends AppCompatActivity {
         home=findViewById(R.id.btnHome);
         others=findViewById(R.id.btnOthers);
         fake=findViewById(R.id.btnFake);
-        auth=findViewById(R.id.btnAuth);
+
         roadL=findViewById(R.id.panel1);
         floodL=findViewById(R.id.panel2);
         trashL=findViewById(R.id.panel3);
         homeL=findViewById(R.id.panel4);
         othersL=findViewById(R.id.panel5);
-        btnGraphCCL=findViewById(R.id.panel8);
+
         fakeL=findViewById(R.id.panel6);
-        authL=findViewById(R.id.panel7);
+
+
+
+
+        btnGraphCCL=findViewById(R.id.panel8);
+        btnGraphCC=findViewById(R.id.btnAuth);
         count(cityName);
 
         roadL.setOnClickListener(new View.OnClickListener() {
@@ -184,16 +189,17 @@ public class CategoryActivity2 extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-        authL.setOnClickListener(new View.OnClickListener() {
+
+        btnGraphCCL.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(CategoryActivity2.this, Authority.class);
+                Intent intent = new Intent(CategoryActivity2.this, GraphActivity3.class);
                 // Pass data to Problemactivity1
 
                 startActivity(intent);
             }
         });
-        auth.setOnClickListener(new View.OnClickListener() {
+        btnGraphCC.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(CategoryActivity2.this, GraphActivity3.class);
@@ -250,13 +256,13 @@ public class CategoryActivity2 extends AppCompatActivity {
     @Override
     public boolean onCreateOptionsMenu (Menu menu)
     {
-        getMenuInflater().inflate(R.menu.adminmenu,menu);
+        getMenuInflater().inflate(R.menu.camenu,menu);
         return super.onCreateOptionsMenu(menu);
     }
 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        if(item.getItemId()==R.id.SignOutAdminMenuId)
+        if(item.getItemId()==R.id.SignOutCAMenuId)
         {
 
             //FirebaseAuth.getInstance().signOut();
@@ -265,9 +271,9 @@ public class CategoryActivity2 extends AppCompatActivity {
             startActivity(intent);
         }
 
-        else if (item.getItemId()==R.id.HomeAdminMenuId)
+        else if (item.getItemId()==R.id.CACityMenuId)
         {
-            Intent i=new Intent(getApplicationContext(),CategoryActivity2.class);
+            Intent i=new Intent(getApplicationContext(),AuthComplainActivity.class);
             startActivity(i);
 
         }

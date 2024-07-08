@@ -6,15 +6,29 @@
     android:layout_height="match_parent"
     tools:context=".AboutActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
+
+    <ScrollView
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center_horizontal"
-        android:text="CSE 3200"
-        android:textColor="@color/black"
-        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="20dp"
+            android:text="Bandarban\nBarguna\nBarisal\nBhola\nBogra\nBrahmanbaria\nChandpur\nChittagong\nChuadanga\nComilla\nCox's Bazar\nDhaka\nDinajpur\nFaridpur\nFeni\nGaibandha\nGazipur\nGopalganj\nHabiganj\nJamalpur\nJashore\nJhalokathi\nJhenaidah\nJoypurhat\nKhagrachari\nKhulna\nKishoreganj\nKurigram\nKushtia\nLakshmipur\nLalmonirhat\nMadaripur\nMagura\nManikganj\nMeherpur\nMoulvibazar\nMunshiganj\nMymensingh\nNaogaon\nNarail\nNarayanganj\nNarsingdi\nNatore\nNetrokona\nNilphamari\nNoakhali\nPabna\nPanchagarh\nPatuakhali\nPirojpur\nRajbari\nRajshahi\nRangamati\nRangpur\nSatkhira\nShariatpur\nSherpur\nSirajganj\nSunamganj\nSylhet\nTangail\nThakurgaon"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </ScrollView>
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

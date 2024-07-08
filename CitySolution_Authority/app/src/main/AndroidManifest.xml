@@ -12,6 +12,8 @@
 
     <uses-feature android:name="android.hardware.camera" />
 
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -22,6 +24,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SafeCity"
         tools:targetApi="31">
+        <activity
+            android:name=".CityNameActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity android:name=".AuthComplainActivity" />
+        <activity android:name=".AuthAddActivity" />
         <activity
             android:name=".GraphActivity3"
             android:exported="false">

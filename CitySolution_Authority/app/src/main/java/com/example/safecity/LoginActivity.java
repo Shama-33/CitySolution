@@ -6,10 +6,13 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
+import android.text.InputType;
 import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -33,6 +36,8 @@ public class LoginActivity extends AppCompatActivity {
     private EditText emailin,passwordin;
     private TextView textViewin,forgotpass;
     private Button buttonin;
+    private ProgressBar progressBar;
+    private ImageView imageViewPasswordVisibility;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,6 +55,8 @@ public class LoginActivity extends AppCompatActivity {
         buttonin= (Button) findViewById(R.id.btnSignin);
         forgotpass=findViewById(R.id.txtForgotPassword);
         textViewin=findViewById(R.id.txtSignUp);
+        progressBar = findViewById(R.id.progressBar);
+        imageViewPasswordVisibility=findViewById(R.id.imageViewPasswordVisibility1);
 
 
 
@@ -57,6 +64,22 @@ public class LoginActivity extends AppCompatActivity {
 
 
 
+        imageViewPasswordVisibility.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Toggle password visibility
+                if (passwordin.getInputType() == InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD) {
+                    passwordin.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_PASSWORD);
+                    imageViewPasswordVisibility.setImageResource(R.drawable.ic_baseline_eye_24);
+                } else {
+                    passwordin.setInputType(InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD);
+                    imageViewPasswordVisibility.setImageResource(R.drawable.ic_baseline_key_24_black);
+                }
+
+
+                passwordin.setSelection(passwordin.getText().length());
+            }
+        });
 
 
 
@@ -114,14 +137,15 @@ public class LoginActivity extends AppCompatActivity {
             Toast.makeText(LoginActivity.this,"Enter Password",Toast.LENGTH_SHORT).show();
             return;
         }
+        //progressBar.setVisibility(View.VISIBLE);
         if ("mizan@admin.cc.bd".equals(emailin.getText().toString()) && "mizan1234".equals(passwordin.getText().toString())) {
-            Intent intent = new Intent(getApplicationContext(), CityActivity.class);
+            Intent intent = new Intent(getApplicationContext(), AuthComplainActivity.class);
             intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
             startActivity(intent);
         }
         else {
 
-
+            progressBar.setVisibility(View.VISIBLE);
             mAuth.signInWithEmailAndPassword(email, pass).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                 @Override
                 public void onComplete(@NonNull Task<AuthResult> task) {
@@ -175,7 +199,7 @@ public class LoginActivity extends AppCompatActivity {
 
                             @Override
                             public void onCancelled(@NonNull DatabaseError error) {
-
+                                progressBar.setVisibility(View.GONE);
                             }
                         });
 
@@ -320,8 +344,11 @@ public class LoginActivity extends AppCompatActivity {
     public void onStart() {
         super.onStart();
 
+
         FirebaseUser firebaseUser = mAuth.getCurrentUser();
         if (firebaseUser != null) {
+            progressBar.setVisibility(View.VISIBLE);
+            Toast.makeText(this, "Signing In", Toast.LENGTH_SHORT).show();
             String uid = firebaseUser.getUid();
 
             DatabaseReference userInfoRef = FirebaseDatabase.getInstance().getReference().child("AuthorityInfo");
@@ -338,14 +365,20 @@ public class LoginActivity extends AppCompatActivity {
                     } else {
                         // The UID does not exist in UserInfo
                         // Handle the case accordingly
+                        progressBar.setVisibility(View.GONE);
                     }
                 }
 
                 @Override
                 public void onCancelled(@NonNull DatabaseError error) {
+                    progressBar.setVisibility(View.GONE);
                     // Handle database error
                 }
             });
+        }
+        else
+        {
+            progressBar.setVisibility(View.GONE);
         }
     }
 

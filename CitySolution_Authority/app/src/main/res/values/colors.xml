@@ -56,5 +56,8 @@
     <color name="bg_color">#FCFDFD</color>
     <color name="colorPrimary_sec">#757575</color>
     <color name="green">#43A047</color>
+    <color name="background_color">#F5F5F5</color>
+    <color name="authority_panel_bg">#3F51B5</color>
+    <color name="complaint_panel_bg">#FF4081</color>
 
 </resources>

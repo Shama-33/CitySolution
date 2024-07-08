@@ -9,6 +9,8 @@
     <string name="invalid_username">Not a valid username</string>
     <string name="invalid_password">Password must be >5 characters</string>
     <string name="login_failed">"Login failed"</string>
+    <string name="authority_icon">Authority Icon</string>
+    <string name="complaint_icon">Complaint Icon</string>
     <string-array name="status_options">
         <item>Pending</item>
         <item>Solved</item>

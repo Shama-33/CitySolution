@@ -54,6 +54,7 @@ import com.google.firebase.storage.UploadTask;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.HashMap;
@@ -79,6 +80,17 @@ public class LocationActivity extends AppCompatActivity {
     private String con,dis,div,ct,loc,pin,cc;
     private NetworkChangeReceiver networkChangeReceiver;
     private ProgressBar uploadProgressBar;
+    private List<String> bangladeshiCities = Arrays.asList(
+            "Bandarban", "Barguna", "Barisal", "Bhola", "Bogra", "Brahmanbaria", "Chandpur", "Chittagong",
+            "Chuadanga", "Comilla", "Cox's Bazar", "Dhaka", "Dinajpur", "Faridpur", "Feni",
+            "Gaibandha", "Gazipur", "Gopalganj", "Habiganj", "Jamalpur", "Jashore", "Jhalokathi", "Jhenaidah",
+            "Joypurhat", "Khagrachari", "Khulna", "Kishoreganj", "Kurigram", "Kushtia", "Lakshmipur",
+            "Lalmonirhat", "Madaripur", "Magura", "Manikganj", "Meherpur", "Moulvibazar", "Munshiganj",
+            "Mymensingh", "Naogaon", "Narail", "Narayanganj", "Narsingdi", "Natore", "Netrokona",
+            "Nilphamari", "Noakhali", "Pabna", "Panchagarh", "Patuakhali", "Pirojpur", "Rajbari",
+            "Rajshahi", "Rangamati", "Rangpur", "Satkhira", "Shariatpur", "Sherpur", "Sirajganj",
+            "Sunamganj", "Sylhet", "Tangail", "Thakurgaon"
+    );
     /*
      <TextView
                             android:id="@+id/textcountry"
@@ -357,6 +369,7 @@ public class LocationActivity extends AppCompatActivity {
         }
         loc=address.getText().toString().trim();
 
+
         if(!con.isEmpty()&&!con.equalsIgnoreCase("bangladesh"))
         {
             Toast.makeText(this, "This service is available for Bangladesh only!!!", Toast.LENGTH_SHORT).show();
@@ -370,6 +383,14 @@ public class LocationActivity extends AppCompatActivity {
             uploadProgressBar.setVisibility(View.GONE);
             return;
         }
+
+        if (!ct.isEmpty() && !bangladeshiCities.contains(ct) ) {
+            //&& bangladeshiCities.contains(cityName)
+            Toast.makeText(this, "Invalid City Name", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
+
 
 
         if(con.isEmpty()||dis.isEmpty()||div.isEmpty()||ct.isEmpty()||loc.isEmpty())

@@ -12,11 +12,15 @@ import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
@@ -155,27 +159,29 @@ public class Authority extends AppCompatActivity {
                         });
                     }
                 else if ("Name Descending".equals(selected)) {
-                        Collections.sort(authArray, new Comparator<AuthorityClass>() {
-                            @Override
-                            public int compare(AuthorityClass authority1, AuthorityClass authority2) {
-                                String name1 = authority1.getName();
-                                String name2 = authority2.getName();
+                    Collections.sort(authArray, new Comparator<AuthorityClass>() {
+                        @Override
+                        public int compare(AuthorityClass authority1, AuthorityClass authority2) {
+                            String name1 = authority1.getName();
+                            String name2 = authority2.getName();
 
-                                // Handle null names
-                                if (name1 == null && name2 == null) {
-                                    return 0; // Both names are null
-                                } else if (name1 == null) {
-                                    return 1; // Null name comes after non-null name
-                                } else if (name2 == null) {
-                                    return -1;} // Non-null name comes before null name
+                            // Handle null names
+                            if (name1 == null && name2 == null) {
+                                return 0; // Both names are null
+                            } else if (name1 == null) {
+                                return 1; // Null name comes after non-null name
+                            } else if (name2 == null) {
+                                return -1; // Non-null name comes before null name
+                            }
 
-                                    // Compare names in descending order
-                                    return name2.compareTo(name1);
-                                }
-                            });
+                            // Compare names in descending order
+                            return name2.compareTo(name1);
                         }
+                    });
+                }
 
- else if ("Address Ascending".equals(selected)) {
+
+                else if ("Address Ascending".equals(selected)) {
                     Collections.sort(authArray, new Comparator<AuthorityClass>() {
                         @Override
                         public int compare(AuthorityClass photo1, AuthorityClass photo2) {
@@ -268,6 +274,27 @@ public class Authority extends AppCompatActivity {
                 });
 
     }
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.addqr, menu);
+        return true;
+    }
 
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.action_add:
+                // Handle the "+" icon click event here
+                Toast.makeText(this, "Add clicked", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(getApplicationContext(), AuthAddActivity.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                startActivity(intent);
+
+
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+    }
 
 }

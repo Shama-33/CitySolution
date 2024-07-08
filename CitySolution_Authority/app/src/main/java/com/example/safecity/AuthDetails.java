@@ -8,6 +8,8 @@ import android.text.SpannableString;
 import android.text.Spanned;
 import android.text.method.LinkMovementMethod;
 import android.text.style.ClickableSpan;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -122,7 +124,26 @@ public class AuthDetails extends AppCompatActivity {
                     email.setText(spannableString);
                     email.setMovementMethod(LinkMovementMethod.getInstance());
 
+                    // Create a clickable SpannableString for the phone number
+                    SpannableString phnSpannableString = new SpannableString(authorityPhn);
+                    ClickableSpan phnClickableSpan = new ClickableSpan() {
+                        @Override
+                        public void onClick(View widget) {
+                            Intent phoneIntent = new Intent(Intent.ACTION_DIAL);
+                            phoneIntent.setData(Uri.parse("tel:" + authorityPhn));
+                            startActivity(phoneIntent);
+                        }
+                    };
+                    phnSpannableString.setSpan(phnClickableSpan, 0, authorityPhn.length(), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                    phn.setText(phnSpannableString);
+                    phn.setMovementMethod(LinkMovementMethod.getInstance());
+
+
+
+
+
                 }
+
             }
 
             @Override
@@ -155,4 +176,33 @@ public class AuthDetails extends AppCompatActivity {
                     }
                 });
     }
+    @Override
+    public boolean onCreateOptionsMenu (Menu menu)
+    {
+        getMenuInflater().inflate(R.menu.camenu,menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        if(item.getItemId()==R.id.SignOutCAMenuId)
+        {
+
+            //FirebaseAuth.getInstance().signOut();
+            finish();
+            Intent intent=new Intent(getApplicationContext(),LoginActivity.class);
+            startActivity(intent);
+        }
+
+        else if (item.getItemId()==R.id.CACityMenuId)
+        {
+            Intent i=new Intent(getApplicationContext(),AuthComplainActivity.class);
+            startActivity(i);
+
+        }
+
+        return super.onOptionsItemSelected(item);
+    }
+
+
 }

@@ -12,6 +12,8 @@ import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -285,6 +287,39 @@ public class ProblemActivity1 extends AppCompatActivity {
                     }
                 });
 
+    }
+    @Override
+    public boolean onCreateOptionsMenu (Menu menu)
+    {
+        getMenuInflater().inflate(R.menu.adminmenu,menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        if(item.getItemId()==R.id.SignOutAdminMenuId)
+        {
+
+            FirebaseAuth.getInstance().signOut();
+            finish();
+            Intent intent=new Intent(getApplicationContext(),LoginActivity.class);
+            startActivity(intent);
+        }
+
+        else if (item.getItemId()==R.id.HomeAdminMenuId)
+        {
+            Intent i=new Intent(getApplicationContext(),CategoryActivity.class);
+            startActivity(i);
+
+        }
+        else if (item.getItemId()==R.id.ProfileAdminMenuId)
+        {
+            Intent i=new Intent(getApplicationContext(),Profile.class);
+            startActivity(i);
+
+        }
+
+        return super.onOptionsItemSelected(item);
     }
 
 

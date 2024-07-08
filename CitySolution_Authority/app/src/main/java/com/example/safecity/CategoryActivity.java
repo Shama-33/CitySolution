@@ -69,9 +69,9 @@ public class CategoryActivity extends AppCompatActivity {
                         btnGraphCCL.setOnClickListener(new View.OnClickListener() {
                             @Override
                             public void onClick(View v) {
-                                Intent intent = new Intent(CategoryActivity.this, GraphActivity1.class);
+                                Intent intent = new Intent(CategoryActivity.this, GraphActivity3.class);
                                 // Pass data to Problemactivity1
-                                intent.putExtra("GRAPH_CITY", cityName);
+                                //intent.putExtra("GRAPH_CITY", cityName);
                                 //intent.putExtra("CATEGORY", "Damaged_Road");
                                 startActivity(intent);
 
@@ -80,9 +80,9 @@ public class CategoryActivity extends AppCompatActivity {
                         btnGraphCC.setOnClickListener(new View.OnClickListener() {
                             @Override
                             public void onClick(View v) {
-                                Intent intent = new Intent(CategoryActivity.this, GraphActivity1.class);
+                                Intent intent = new Intent(CategoryActivity.this, GraphActivity3.class);
                                 // Pass data to Problemactivity1
-                                intent.putExtra("GRAPH_CITY", cityName);
+                                //intent.putExtra("GRAPH_CITY", cityName);
                                 //intent.putExtra("CATEGORY", "Damaged_Road");
                                 startActivity(intent);
                             }

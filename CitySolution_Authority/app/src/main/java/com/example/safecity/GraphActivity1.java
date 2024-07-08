@@ -18,6 +18,7 @@ import com.github.mikephil.charting.data.Entry;
 import com.github.mikephil.charting.data.LineData;
 import com.github.mikephil.charting.data.LineDataSet;
 import com.github.mikephil.charting.formatter.ValueFormatter;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -38,6 +39,9 @@ public class GraphActivity1 extends AppCompatActivity {
     private BarChart barChart;
 
 
+
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -46,6 +50,12 @@ public class GraphActivity1 extends AppCompatActivity {
         GRAPH_CITY=getIntent().getStringExtra("GRAPH_CITY");
         lineChart = findViewById(R.id.graphCC);
         barChart = findViewById(R.id.bargraphCC);
+
+
+
+
+
+
         count(GRAPH_CITY);
     }
     private void count(String city) {

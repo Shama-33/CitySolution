@@ -276,6 +276,34 @@ public class ProblemDetailsActivity2 extends AppCompatActivity {
 
     }
 
+    @Override
+    public boolean onCreateOptionsMenu (Menu menu)
+    {
+        getMenuInflater().inflate(R.menu.camenu,menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        if(item.getItemId()==R.id.SignOutCAMenuId)
+        {
+
+            //FirebaseAuth.getInstance().signOut();
+            finish();
+            Intent intent=new Intent(getApplicationContext(),LoginActivity.class);
+            startActivity(intent);
+        }
+
+        else if (item.getItemId()==R.id.CACityMenuId)
+        {
+            Intent i=new Intent(getApplicationContext(),AuthComplainActivity.class);
+            startActivity(i);
+
+        }
+
+        return super.onOptionsItemSelected(item);
+    }
+
 
 
 }

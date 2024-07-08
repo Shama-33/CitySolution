@@ -118,16 +118,19 @@
                             android:fontFamily="@font/montserrat"
                             android:textSize="18dp"
                             android:text="@string/lbl_loca"
-                            android:textColor="@color/colorPrimary_sec" />
+                            android:textColor="@color/black"
+                            android:layout_marginRight="5dp"/>
 
                         <EditText
                             android:id="@+id/textaddress"
                             android:textSize="18dp"
-                            android:layout_width="wrap_content"
+                            android:hint="Your Area "
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:background="@color/white"
                             android:fontFamily="@font/montserrat"
-                            android:textColor="@color/teal_700" />
+                            android:textColor="@color/teal_700"
+                            android:textStyle="italic"/>
 
                     </LinearLayout>
 
@@ -145,14 +148,17 @@
                             android:fontFamily="@font/montserrat"
                             android:text="@string/lbl_city"
                             android:textSize="18dp"
-                            android:textColor="@color/colorPrimary_sec" />
+                            android:textColor="@color/black"
+                            android:layout_marginRight="5dp" />
 
                         <EditText
                             android:id="@+id/textlocality"
-                            android:layout_width="wrap_content"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="@dimen/spacing_control"
+                            android:hint="Your City "
                             android:textSize="18dp"
+                            android:textStyle="italic"
                             android:background="@color/white"
                             android:fontFamily="@font/montserrat"
                             android:text="@string/ques"
@@ -178,13 +184,16 @@
                             android:fontFamily="@font/montserrat"
                             android:gravity="center_vertical"
                             android:text="@string/pincode"
-                            android:textColor="@color/colorPrimary_sec" />
+                            android:textColor="@color/black"
+                            android:layout_marginRight="5dp" />
 
                         <EditText
                             android:id="@+id/textcode"
-                            android:layout_width="wrap_content"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:hint="0000"
                             android:textSize="18dp"
+                            android:textStyle="italic"
                             android:layout_marginStart="@dimen/spacing_control"
                             android:layout_marginTop="0dp"
                             android:background="@color/white"
@@ -215,14 +224,17 @@
                             android:fontFamily="@font/montserrat"
                             android:gravity="center_vertical"
                             android:text="@string/lbl_div"
-                            android:textColor="@color/colorPrimary_sec" />
+                            android:textColor="@color/black"
+                            android:layout_marginRight="5dp" />
 
                         <EditText
                             android:id="@+id/textstate"
-                            android:layout_width="wrap_content"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="@dimen/spacing_control"
                             android:textSize="18dp"
+                            android:hint="Your Div"
+                            android:textStyle="italic"
                             android:layout_marginTop="0dp"
                             android:background="@color/white"
                             android:fontFamily="@font/montserrat"
@@ -251,14 +263,17 @@
                             android:gravity="center_vertical"
                             android:textSize="18dp"
                             android:text="@string/dictrict"
-                            android:textColor="@color/colorPrimary_sec" />
+                            android:textColor="@color/black"
+                            android:layout_marginRight="5dp" />
 
                         <EditText
                             android:id="@+id/textdistrict"
-                            android:layout_width="wrap_content"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="@dimen/spacing_control"
                             android:layout_marginTop="0dp"
+                            android:hint="Your District"
+                            android:textStyle="italic"
                             android:background="@color/white"
                             android:fontFamily="@font/montserrat"
                             android:text="@string/ques"
@@ -287,18 +302,21 @@
                             android:gravity="center_vertical"
                             android:text="@string/country"
                             android:textSize="18dp"
-                            android:textColor="@color/colorPrimary_sec" />
+                            android:textColor="@color/black"
+                            android:layout_marginRight="5dp" />
 
 
                         <EditText
                             android:id="@+id/textcountry"
-                            android:layout_width="wrap_content"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="@dimen/spacing_control"
                             android:layout_marginTop="0dp"
                             android:background="@color/white"
                             android:fontFamily="@font/montserrat"
                             android:text="@string/ques"
+                            android:textStyle="italic"
+                            android:hint="Your Country"
                             android:textColor="@color/teal_700"
                             android:textSize="18dp"
                             tools:text="$50" />
