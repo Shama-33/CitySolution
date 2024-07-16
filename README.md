@@ -44,9 +44,39 @@ This project utilizes various components and technologies, including:
 
  You can directly find the executable file(app) in the apk folder. Download and Install it directly to your android mobile phone.
 
+ 
+
  ## Demo Use
   You can find the screen-recordings of the two apps inside the AppVideo folder. 
-  User Manual.pdf also contains the instruction for using the applications.
+  User Manual.pdf also contains the instructions for using the applications.
+
+  
+
+## Deploying Code with Modified Firebase Account
+For deploying the code, Android Studio dolphin version is needed. Here is the step-by-step procedure for deploying the code with a modified firebase account.
+•	**Clone the Repository:**
+Clone the project repository to your local machine using Git.
+•	**Open the Project in Android Studio:**
+Open Android Studio.
+Click on "Open an existing Android Studio project" and navigate to the cloned project directory.
+•	**Create a Firebase Project:**
+Go to the Firebase Console.
+Click on "Add project" and follow the instructions to create a new Firebase project.
+•	**Add Android App to Firebase:**
+In your Firebase project overview, click on the Android icon to add an Android app.
+Register your app with the package name of your Android project (you can find this in the AndroidManifest.xml file).
+Download the google-services.json file provided by Firebase.
+•	**Configure Firebase in Your Project:**
+Move the downloaded google-services.json file to the app directory of your Android Studio project.
+Open the build.gradle file (Project level) and ensure you have the following classpath in the dependencies section:
+classpath 'com.google.gms:google-services:4.3.10' // or the latest version
+•	**Update Firebase Rules:**
+In the Firebase Console, navigate to the Realtime Database and Storage sections.
+Update the rules to ensure proper access permissions during development. 
+•	**Run the Project:**
+Sync your project with Gradle files.
+Run the project on an emulator or a physical device.
+
  
 
 ## License
